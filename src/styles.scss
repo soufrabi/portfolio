@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Remove browser default padding/margins and set full viewport size */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Replaced by dynamic viewport '100dvh' for mobile support */
+  min-height: 100dvh; 
+  width: 100vw;
+}

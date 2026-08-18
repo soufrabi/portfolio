@@ -1,0 +1,10 @@
+<nav class="navbar">
+<div class="nav-title">Anirban Dey</div>
+<div class="nav-links">
+    @for(item of items; track $index){
+        <a [routerLink]="item.href">{{item.title}}</a>
+    }
+</div>
+</nav>
+
+
