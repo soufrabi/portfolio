@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-header',
   imports: [RouterLink],
-  templateUrl: './navbar.html',
-  styleUrl: './navbar.scss',
+  templateUrl: './header.html',
+  styleUrl: './header.scss',
 })
-export class Navbar {
+export class Header {
   public items: { title: string, href: string }[] = [
     { title: 'About', href: "/#about" },
     { title: 'Skills', href: "/#skills" },
