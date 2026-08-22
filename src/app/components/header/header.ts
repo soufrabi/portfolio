@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
-export class Header {
+export class HeaderComponent {
   public menuOpen = signal(false);
 
   public items: { title: string; href: string }[] = [

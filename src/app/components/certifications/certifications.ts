@@ -13,7 +13,7 @@ interface Certification {
   templateUrl: './certifications.html',
   styleUrl: './certifications.scss',
 })
-export class Certifications {
+export class CertificationsComponent {
     certifications: Certification[] = [
     {
       title: 'Microsoft Certified: Azure Fundamentals',
