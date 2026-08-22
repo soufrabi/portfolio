@@ -1,10 +1,28 @@
 <nav class="header">
-<div class="header-title">Anirban Dey</div>
-<div class="header-links">
-    @for(item of items; track $index){
-        <a [routerLink]="item.href">{{item.title}}</a>
+  <div class="header-title">Anirban Dey</div>
+
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-label="Toggle navigation"
+    [attr.aria-expanded]="menuOpen()"
+    (click)="menuOpen.update(value => !value)"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="header-links" [class.open]="menuOpen()">
+    @for (item of items; track item.href) {
+      <a
+        [routerLink]="item.href"
+        (click)="menuOpen.set(false)"
+      >
+        {{ item.title }}
+      </a>
     }
-</div>
+  </div>
 </nav>
 
 
