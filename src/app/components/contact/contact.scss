@@ -140,6 +140,8 @@ a.contact-link:hover {
 
 .form-card {
   width: min(100%, 830px);
+  max-width: 100%;
+  box-sizing: border-box;
 
   margin-top: 14px;
   padding: 50px;
@@ -198,7 +200,6 @@ form {
 input,
 textarea {
   width: 100%;
-
   box-sizing: border-box;
 
   border: 1px solid rgba(170, 187, 208, 0.28);
