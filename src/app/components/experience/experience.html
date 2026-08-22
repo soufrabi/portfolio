@@ -1,0 +1,36 @@
+<section class="experience">
+  <div class="section-header">
+    <span class="eyebrow">CAREER JOURNEY</span>
+
+    <h2>Professional Experience</h2>
+
+    <div class="accent"></div>
+  </div>
+
+  <div class="timeline">
+    @for (experience of experiences; track experience.period) {
+      <article class="experience-item">
+        <div class="timeline-marker"></div>
+
+        <div class="experience-card">
+          <div class="experience-header">
+            <div class="experience-title">
+              <h3>{{ experience.role }}</h3>
+              <span class="company">
+                {{ experience.company }}
+              </span>
+            </div>
+
+            <span class="period">
+              {{ experience.period }}
+            </span>
+          </div>
+
+          <p>
+            {{ experience.description }}
+          </p>
+        </div>
+      </article>
+    }
+  </div>
+</section>

@@ -1,0 +1,403 @@
+:host {
+  display: block;
+}
+
+.experience {
+  width: min(100% - 3rem, 90rem);
+  margin-inline: auto;
+  padding-block: 4rem 6rem;
+}
+
+/* =========================
+   Section Header
+========================= */
+
+.section-header {
+  margin-left: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+
+  color: #19b89f;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+h2 {
+  margin: 0;
+
+  color: #102033;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.accent {
+  width: 4rem;
+  height: 0.25rem;
+  margin-top: 1.25rem;
+
+  border-radius: 999rem;
+  background: linear-gradient(
+    90deg,
+    #d2aa3d,
+    #20b89f
+  );
+}
+
+/* =========================
+   Timeline
+========================= */
+
+.timeline {
+  position: relative;
+
+  /*
+   * The cards start after this padding.
+   * The timeline itself is positioned inside
+   * this padding area.
+   */
+  padding-left: 4.25rem;
+}
+
+/*
+ * Vertical timeline
+ */
+.timeline::before {
+  content: '';
+
+  position: absolute;
+  top: 0.75rem;
+  bottom: 0;
+  left: 1.5rem;
+
+  width: 0.125rem;
+
+  background: linear-gradient(
+    to bottom,
+    #d2aa3d,
+    #20b89f,
+    #d2aa3d
+  );
+}
+
+/* =========================
+   Experience Item
+========================= */
+
+.experience-item {
+  position: relative;
+  margin-bottom: 3.25rem;
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * IMPORTANT:
+ *
+ * The marker is positioned relative to
+ * .experience-item, while the line is
+ * positioned relative to .timeline.
+ *
+ * Therefore the marker needs to be shifted
+ * so its CENTER sits on the line.
+ */
+.timeline-marker {
+  position: absolute;
+
+  top: 0.2rem;
+
+  /*
+   * Corrected from -4.25rem.
+   *
+   * Line position:
+   *   1.5rem from timeline's left edge
+   *
+   * Card position:
+   *   4.25rem from timeline's left edge
+   *
+   * Therefore marker left:
+   *
+   *   1.5rem - 4.25rem - 0.625rem
+   *   = -3.375rem
+   *
+   * 0.625rem is half of the 1.25rem circle.
+   */
+  left: -3.375rem;
+
+  width: 1.25rem;
+  height: 1.25rem;
+
+  box-sizing: border-box;
+
+  border: 0.2rem solid #d2aa3d;
+  border-radius: 50%;
+
+  background: #fff;
+}
+
+.experience-item:nth-child(even) .timeline-marker {
+  border-color: #20b89f;
+}
+
+/* =========================
+   Experience Card
+========================= */
+
+.experience-card {
+  padding: 1.75rem 2rem;
+
+  border: 0.0625rem solid #d9dee5;
+  border-radius: 1rem;
+
+  background: #fff;
+
+  box-shadow: 0 0.25rem 1rem rgb(16 32 51 / 3%);
+}
+
+.experience-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 2rem;
+}
+
+.experience-title {
+  min-width: 0;
+}
+
+h3 {
+  margin: 0 0 0.3rem;
+
+  color: #102033;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.company {
+  display: block;
+
+  color: #19b89f;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.period {
+  flex-shrink: 0;
+
+  padding: 0.5rem 0.85rem;
+
+  border-radius: 999rem;
+
+  color: #8b650f;
+  background: #faf5e8;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.experience-card p {
+  margin: 1.25rem 0 0;
+
+  color: #526078;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   Large Screens
+========================= */
+
+@media (min-width: 75rem) {
+  .experience {
+    width: min(100% - 6rem, 90rem);
+  }
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 64rem) {
+  .experience {
+    width: min(100% - 2.5rem, 70rem);
+    padding-block: 3.5rem 5rem;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .timeline {
+    padding-left: 3.75rem;
+  }
+
+  /*
+   * Keep the marker center aligned with
+   * the line after changing timeline padding.
+   *
+   * Line = 1.25rem
+   * Card = 3.75rem
+   * Half circle = 0.625rem
+   *
+   * 1.25 - 3.75 - 0.625 = -3.125rem
+   */
+  .timeline::before {
+    left: 1.25rem;
+  }
+
+  .timeline-marker {
+    left: -3.125rem;
+  }
+
+  .experience-header {
+    gap: 1.25rem;
+  }
+
+  .experience-card {
+    padding: 1.5rem;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 48rem) {
+  .experience {
+    width: min(100% - 2rem, 40rem);
+    padding-block: 3rem 4rem;
+  }
+
+  .section-header {
+    margin-left: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .eyebrow {
+    font-size: 0.8rem;
+  }
+
+  h2 {
+    font-size: clamp(2.25rem, 10vw, 3rem);
+  }
+
+  .timeline {
+    padding-left: 2.25rem;
+  }
+
+  /*
+   * Line = 0.65rem
+   * Card = 2.25rem
+   * Half circle = 0.575rem
+   *
+   * 0.65 - 2.25 - 0.575
+   * ≈ -2.175rem
+   */
+  .timeline::before {
+    left: 0.65rem;
+  }
+
+  .timeline-marker {
+    left: -2.175rem;
+
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+
+  .experience-item {
+    margin-bottom: 2rem;
+  }
+
+  .experience-card {
+    padding: 1.25rem;
+    border-radius: 0.8rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .period {
+    align-self: flex-start;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .company {
+    font-size: 0.95rem;
+  }
+
+  .experience-card p {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 30rem) {
+  .experience {
+    width: min(100% - 1.25rem, 25rem);
+    padding-block: 2.5rem 3rem;
+  }
+
+  .timeline {
+    padding-left: 1.75rem;
+  }
+
+  .timeline::before {
+    left: 0.5rem;
+  }
+
+  /*
+   * Line = 0.5rem
+   * Card = 1.75rem
+   * Half circle = 0.5rem
+   *
+   * 0.5 - 1.75 - 0.5
+   * = -1.75rem
+   */
+  .timeline-marker {
+    left: -1.75rem;
+
+    width: 1rem;
+    height: 1rem;
+
+    border-width: 0.15rem;
+  }
+
+  .experience-card {
+    padding: 1rem;
+  }
+
+  .period {
+    max-width: 100%;
+    padding: 0.4rem 0.7rem;
+
+    font-size: 0.75rem;
+    white-space: normal;
+  }
+
+  .experience-card p {
+    font-size: 0.9rem;
+  }
+}
