@@ -1,0 +1,39 @@
+<section class="certifications">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="eyebrow">CREDENTIALS</span>
+
+      <h2>Certifications</h2>
+
+      <div class="accent-line">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="certifications-grid">
+
+      @for (certification of certifications; track certification.title) {
+        <article
+          class="certification-card"
+          role="button"
+          tabindex="0"
+          (click)="openCertification(certification.url)"
+          (keydown.enter)="openCertification(certification.url)"
+          (keydown.space)="openCertification(certification.url)"
+        >
+          <div class="icon">
+            <span>{{ certification.icon }}</span>
+          </div>
+
+          <div class="certification-content">
+            <h3>{{ certification.title }}</h3>
+            <p>{{ certification.issuer }}</p>
+          </div>
+        </article>
+      }
+
+    </div>
+
+  </div>
+</section>
