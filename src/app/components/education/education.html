@@ -1,0 +1,45 @@
+<section class="education">
+  <div class="education-header">
+    <span class="eyebrow">ACADEMIC BACKGROUND</span>
+
+    <h2>Education</h2>
+
+    <div class="heading-line">
+      <span></span>
+    </div>
+  </div>
+
+  <div class="education-grid">
+    @for (item of education; track item.degree; let i = $index) {
+      <article
+        class="education-card"
+        [class.accent-gold]="i < 2"
+        [class.accent-teal]="i >= 2"
+      >
+        <h3>{{ item.degree }}</h3>
+
+        <p class="institution">
+          {{ item.institution }}
+        </p>
+
+        @if (item.period) {
+          <p class="period">
+            {{ item.period }}
+          </p>
+        }
+
+        @if (item.year) {
+          <p class="period">
+            {{ item.year }}
+          </p>
+        }
+
+        @if (item.result || item.tag) {
+          <div class="badge">
+            {{ item.result || item.tag }}
+          </div>
+        }
+      </article>
+    }
+  </div>
+</section>

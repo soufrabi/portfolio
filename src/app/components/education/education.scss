@@ -1,0 +1,225 @@
+.education {
+  width: 100%;
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 70px 40px 80px;
+  box-sizing: border-box;
+  background: #fafbfc;
+}
+
+.education-header {
+  margin-bottom: 52px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 20px;
+
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #22b8a5;
+}
+
+h2 {
+  margin: 0;
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(42px, 4vw, 58px);
+  line-height: 1.1;
+  font-weight: 700;
+  color: #122238;
+}
+
+.heading-line {
+  width: 66px;
+  height: 4px;
+  margin-top: 24px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #22b8a5;
+
+  span {
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: #d1ad45;
+  }
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.education-card {
+  min-height: 254px;
+  padding: 34px 32px;
+  box-sizing: border-box;
+
+  border: 1px solid #d5dce5;
+  border-radius: 16px;
+  background: #ffffff;
+
+  box-shadow: 0 12px 30px rgba(18, 34, 56, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 35px rgba(18, 34, 56, 0.08);
+  }
+
+  &.accent-gold {
+    border-top: 4px solid #d1ad45;
+  }
+
+  &.accent-teal {
+    border-top: 4px solid #22b8a5;
+  }
+}
+
+h3 {
+  margin: 0 0 8px;
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #122238;
+}
+
+.institution {
+  margin: 0 0 8px;
+
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #20b49f;
+}
+
+.period {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #8794a8;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+
+  margin-top: 12px;
+  padding: 7px 14px;
+
+  border-radius: 999px;
+  background: #eaf7f4;
+
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+  color: #087d6d;
+}
+
+/* Tablet */
+@media (max-width: 1050px) {
+  .education {
+    padding: 60px 28px 70px;
+  }
+
+  .education-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .education-card {
+    min-height: 230px;
+    padding: 30px 26px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .institution {
+    font-size: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .education {
+    padding: 50px 20px 60px;
+  }
+
+  .education-header {
+    margin-bottom: 35px;
+  }
+
+  .eyebrow {
+    margin-bottom: 14px;
+    font-size: 13px;
+    letter-spacing: 1.6px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  .heading-line {
+    margin-top: 18px;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .education-card {
+    min-height: auto;
+    padding: 26px 24px;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+
+  .institution {
+    font-size: 17px;
+  }
+
+  .period {
+    font-size: 15px;
+  }
+
+  .badge {
+    font-size: 14px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+  .education {
+    padding-inline: 16px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  .education-card {
+    padding: 22px 20px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}

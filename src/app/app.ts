@@ -5,10 +5,12 @@ import { FooterComponent } from "./components/footer/footer";
 import { HeroComponent } from "./components/hero/hero";
 import { CertificationsComponent } from "./components/certifications/certifications";
 import { ExperienceComponent } from "./components/experience/experience";
+import { ContactComponent } from "./components/contact/contact";
+import { EducationComponent } from "./components/education/education";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, HeroComponent, CertificationsComponent, ExperienceComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, HeroComponent, CertificationsComponent, ExperienceComponent, ContactComponent, EducationComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
