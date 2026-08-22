@@ -16,7 +16,7 @@
   <div class="header-links" [class.open]="menuOpen()">
     @for (item of items; track item.href) {
       <a
-        [routerLink]="item.href"
+        [href]="item.href"
         (click)="menuOpen.set(false)"
       >
         {{ item.title }}
